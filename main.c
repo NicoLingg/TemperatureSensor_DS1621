@@ -1,7 +1,7 @@
 /*!
 *\mainpage
 *\author Lingg Nico
-*\brief MFM, Datenkommunikation mechatronischer Systeme - SoSe 2015
+*\brief Tempratursensor DS1621
 *\date 30.06.2015
 *
 **\version 2.0
