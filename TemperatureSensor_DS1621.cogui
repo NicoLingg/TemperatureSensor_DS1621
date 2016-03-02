@@ -3,8 +3,8 @@
 <workbenchAdvisor/>
 <window>
 <fastViewData fastViewLocation="1024">
-<orientation position="512" view="org.coocox.component.ui.ComponentView"/>
 <orientation position="512" view="org.coocox.builder.ui.views.ProjectView"/>
+<orientation position="512" view="org.coocox.component.ui.ComponentView"/>
 </fastViewData>
 <perspectiveBar/>
 <page focus="true" label="Workspace - CooCox CoBuilder">
@@ -15,6 +15,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -23,23 +25,28 @@
 <input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="260" subPageIndex="2" verticalPosition="0"/>
 </input>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Nico/Desktop/Studium_Schule/02_Master Mechatronik/2. Semester/Datenkommunikation mechatronischer Systeme/04_Projektarbeit/00_FINAL-Abgabe/Temperatursensor_DS1621/main.c" title="main.c" tooltip="C:/Users/Nico/Desktop/Studium_Schule/02_Master Mechatronik/2. Semester/Datenkommunikation mechatronischer Systeme/04_Projektarbeit/00_FINAL-Abgabe/Temperatursensor_DS1621/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DS1621_AuerLinggMaier/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12170" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Nico/Desktop/Website_Software/TemperatureSensor_DS1621/main.c" title="main.c" tooltip="C:/Users/Nico/Desktop/Website_Software/TemperatureSensor_DS1621/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TemperatureSensor_DS1621/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12170" selectionTopPixel="10093"/>
+</editor>
+<editor id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
+<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</input>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="lpc17xx_can.c" partName="lpc17xx_can.c" path="C:/Users/Nico/Desktop/Website_Software/TemperatureSensor_DS1621/lpc17xx_lib/source/lpc17xx_can.c" title="lpc17xx_can.c" tooltip="C:/Users/Nico/Desktop/Website_Software/TemperatureSensor_DS1621/lpc17xx_lib/source/lpc17xx_can.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TemperatureSensor_DS1621/lpc17xx_lib/source/lpc17xx_can.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="4448" selectionTopPixel="3300"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="2">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
-<element path="/DS1621_AuerLinggMaier"/>
-<element path="/DS1621_AuerLinggMaier/cmsis_boot"/>
-<element path="/DS1621_AuerLinggMaier/lpc17xx_lib"/>
-<element path="/DS1621_AuerLinggMaier/lpc17xx_lib/include"/>
-<element path="/DS1621_AuerLinggMaier/lpc17xx_lib/source"/>
+<element path="/TemperatureSensor_DS1621"/>
 </expanded>
 <selection>
-<element path="/DS1621_AuerLinggMaier/lpc17xx_lib/source/lpc17xx_can.c"/>
+<element path="/TemperatureSensor_DS1621/main.c"/>
 </selection>
 </viewState>
 </view>
@@ -65,7 +72,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.coocox.builder.perspective.CoBuilder">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.coocox.builder.perspective.CoBuilder">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.coocox.builder.ui.PerspectiveCoBuilder" id="org.coocox.builder.perspective.CoBuilder" label="CooCox CoBuilder"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -254,7 +261,6 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/cmsis_boot/LPC17xx.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/lpc17xx_lib/source/lpc17xx_can.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/lpc17xx_lib/source/lpc17xx_i2c.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/lpc17xx_lib/include/lpc17xx_can.h"/>
@@ -268,23 +274,16 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/stdio/printf.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/lpc17xx_lib/source/lpc17xx_i2c.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DS1621_AuerLinggMaier/lpc17xx_lib/include/lpc17xx_can.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TemperatureSensor_DS1621/main.c"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TemperatureSensor_DS1621/lpc17xx_lib/source/lpc17xx_can.c"/>
 </editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="11443" y="112"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1861" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="LPC17xx.h" index="1">
-<position info="not_deleted" x="37471" y="8"/>
-</item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="11118" y="0"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="2">
+<item historyLabel="lpc17xx_can.c" index="1">
 <position info="not_deleted" x="50661" y="15"/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -293,13 +292,13 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="8419" y="8"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="3">
+<item historyLabel="lpc17xx_i2c.c" index="2">
 <position info="not_deleted" x="8448" y="8"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="8419" y="8"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="3">
+<item historyLabel="lpc17xx_i2c.c" index="2">
 <position info="not_deleted" x="8448" y="8"/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -317,22 +316,22 @@
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="lpc17xx_can.h" index="4">
+<item historyLabel="lpc17xx_can.h" index="3">
 <position info="not_deleted" x="27799" y="12"/>
 </item>
-<item historyLabel="lpc17xx_can.h" index="4">
+<item historyLabel="lpc17xx_can.h" index="3">
 <position info="not_deleted" x="22887" y="13"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="11542" y="0"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="5">
+<item historyLabel="lpc17xx_i2c.c" index="4">
 <position info="not_deleted" x="8448" y="8"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="6">
+<item historyLabel="lpc17xx_can.c" index="5">
 <position info="not_deleted" x="50661" y="15"/>
 </item>
-<item historyLabel="lpc17xx_can.h" index="4">
+<item historyLabel="lpc17xx_can.h" index="3">
 <position info="not_deleted" x="22887" y="13"/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -341,10 +340,10 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="5619" y="0"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="7">
+<item historyLabel="lpc17xx_i2c.c" index="6">
 <position info="not_deleted" x="8448" y="8"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="7">
+<item historyLabel="lpc17xx_i2c.c" index="6">
 <position info="not_deleted" x="24790" y="22"/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -362,25 +361,25 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2770" y="10"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="8">
+<item historyLabel="lpc17xx_can.c" index="7">
 <position info="not_deleted" x="50661" y="15"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="8">
+<item historyLabel="lpc17xx_can.c" index="7">
 <position info="not_deleted" x="4434" y="8"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="11399" y="8"/>
 </item>
-<item historyLabel="lpc17xx_can.h" index="9">
+<item historyLabel="lpc17xx_can.h" index="8">
 <position info="not_deleted" x="22914" y="18"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="11842" y="13"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="10">
+<item historyLabel="lpc17xx_i2c.c" index="9">
 <position info="not_deleted" x="24790" y="22"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="10">
+<item historyLabel="lpc17xx_i2c.c" index="9">
 <position info="not_deleted" x="8489" y="9"/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -392,32 +391,42 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2591" y="12"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="11">
+<item historyLabel="lpc17xx_can.c" index="10">
 <position info="not_deleted" x="4434" y="8"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="11">
+<item historyLabel="lpc17xx_can.c" index="10">
 <position info="not_deleted" x="4448" y="17"/>
 </item>
-<item historyLabel="printf.c" index="12">
+<item historyLabel="printf.c" index="11">
 <position info="not_deleted" x="745" y="0"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="11">
+<item historyLabel="lpc17xx_can.c" index="10">
 <position info="not_deleted" x="4448" y="17"/>
 </item>
-<item historyLabel="lpc17xx_i2c.c" index="13">
+<item historyLabel="lpc17xx_i2c.c" index="12">
 <position info="not_deleted" x="8489" y="9"/>
 </item>
-<item historyLabel="lpc17xx_can.c" index="11">
+<item historyLabel="lpc17xx_can.c" index="10">
 <position info="not_deleted" x="4448" y="17"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="8791" y="0"/>
 </item>
-<item historyLabel="lpc17xx_can.h" index="14">
+<item historyLabel="lpc17xx_can.h" index="13">
 <position info="not_deleted" x="22914" y="18"/>
 </item>
-<item active="true" historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="0">
 <position info="not_deleted" x="8791" y="0"/>
+</item>
+<item historyLabel="main.c" index="14">
+<position info="not_deleted" x="12170" y="0"/>
+</item>
+<item historyLabel="Configuration" index="15"/>
+<item historyLabel="main.c" index="14">
+<position info="not_deleted" x="12170" y="0"/>
+</item>
+<item active="true" historyLabel="lpc17xx_can.c" index="16">
+<position info="not_deleted" x="4448" y="17"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -426,6 +435,17 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lpc17xx_can.c" tooltip="TemperatureSensor_DS1621/lpc17xx_lib/source/lpc17xx_can.c">
+<persistable path="/TemperatureSensor_DS1621/lpc17xx_lib/source/lpc17xx_can.c"/>
+</file>
+<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
+<persistable>
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</persistable>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Microcontroller_Hand/main.c">
+<persistable path="/Microcontroller_Hand/main.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="DS1621_AuerLinggMaier/main.c">
 <persistable path="/DS1621_AuerLinggMaier/main.c"/>
 </file>
@@ -461,15 +481,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LPC17xx.h" tooltip="DS1621_AuerLinggMaier/cmsis_boot/LPC17xx.h">
 <persistable path="/DS1621_AuerLinggMaier/cmsis_boot/LPC17xx.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lpc17xx_i2c.c" tooltip="DS1621_AuerLinggMaier/lpc17xx_lib/source/lpc17xx_i2c.c">
-<persistable path="/DS1621_AuerLinggMaier/lpc17xx_lib/source/lpc17xx_i2c.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lpc17xx_uart.h" tooltip="Ansteuerung_ADC/lpc17xx_lib/include/lpc17xx_uart.h">
-<persistable path="/Ansteuerung_ADC/lpc17xx_lib/include/lpc17xx_uart.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="printf.c" tooltip="Ansteuerung_ADC/stdio/printf.c">
-<persistable path="/Ansteuerung_ADC/stdio/printf.c"/>
 </file>
 </mruList>
 </workbench>

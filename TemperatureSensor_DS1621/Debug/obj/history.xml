@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 4.8.2 i686-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DLPC1769 -I..\..\..\..\..\Users\Nico\Desktop\Website_Software -I..\..\..\..\..\Users\Nico\Desktop -I..\..\..\..\..\Users\Nico\Desktop\Website_Software\TemperatureSensor_DS1621\lpc17xx_lib\include -I..\..\..\..\..\Users\Nico\Desktop\Website_Software\TemperatureSensor_DS1621 -I..\..\..\..\..\Users\Nico\Desktop\Website_Software\TemperatureSensor_DS1621\lpc17xx_lib -I..\..\..\..\..\Users\Nico\Desktop\Website_Software\TemperatureSensor_DS1621\cmsis_boot -I..\..\..\..\..\Users\Nico\Desktop\Website_Software\TemperatureSensor_DS1621\cmsis">
+      <target file="lpc17xx_i2c.o" lastModified="15339397b09">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_i2c.c" lastModified="14d4d76448b"/>
+      </target>
+      <target file="system_LPC17xx.o" lastModified="15339397811">
+         <source file="..\..\..\cmsis_boot\system_LPC17xx.c" lastModified="14d4d763761"/>
+      </target>
+      <target file="startup_LPC17xx.o" lastModified="15339397992">
+         <source file="..\..\..\cmsis_boot\startup\startup_LPC17xx.c" lastModified="14d4d763757"/>
+      </target>
+      <target file="printf.o" lastModified="1533939792a">
+         <source file="..\..\..\stdio\printf.c" lastModified="14d4d8725ca"/>
+      </target>
+      <target file="main.o" lastModified="153393978a0">
+         <source file="..\..\..\main.c" lastModified="15338687646"/>
+      </target>
+      <target file="lpc17xx_libcfg_default.o" lastModified="153393979f7">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.c" lastModified="14d4d763784"/>
+      </target>
+      <target file="lpc17xx_can.o" lastModified="15339397720">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_can.c" lastModified="14d56eb84ae"/>
+      </target>
+      <target file="lc798x.o" lastModified="15339397ba0">
+         <source file="..\..\..\lc798x.c" lastModified="14c51c4d9cf"/>
+      </target>
+      <target file="lpc17xx_pinsel.o" lastModified="15339397a6e">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_pinsel.c" lastModified="14d4d763798"/>
+      </target>
+      <target file="lpc17xx_clkpwr.o" lastModified="15339397796">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_clkpwr.c" lastModified="14d4d76373e"/>
+      </target>
+   </processor>
+</history>

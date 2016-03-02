@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project version="2G - 1.7.7" name="DS1621_AuerLinggMaier">
-  <Target name="DS1621_AuerLinggMaier" isCurrent="1">
+<Project version="2G - 1.7.7" name="TemperatureSensor_DS1621">
+  <Target name="TemperatureSensor_DS1621" isCurrent="1">
     <Device manufacturerId="7" manufacturerName="NXP" chipId="166" chipName="LPC1769" boardId="" boardName=""/>
     <BuildOption>
       <Compile>
@@ -30,12 +30,12 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="0x00008000" startValue="0x2007C000"/>
         </MemoryAreas>
-        <LocateLinkFile path="../../../../../../../../../../coocox/coide/configuration/programdata/ds1621_auerlinggmaier/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="../../../../../coocox/coide/configuration/programdata/temperaturesensor_ds1621/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
         <Option name="Path" value="./"/>
-        <Option name="Name" value="DS1621_AuerLinggMaier"/>
+        <Option name="Name" value="TemperatureSensor_DS1621"/>
         <Option name="HEX" value="1"/>
         <Option name="BIN" value="1"/>
       </Output>
@@ -102,8 +102,8 @@
     <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
     <File name="lpc17xx_lib/include/lpc_types.h" path="lpc17xx_lib/include/lpc_types.h" type="1"/>
     <File name="lpc17xx_lib/include/lpc17xx_clkpwr.h" path="lpc17xx_lib/include/lpc17xx_clkpwr.h" type="1"/>
-    <File name="lc798x.c" path="lc798x.c" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
+    <File name="lc798x.c" path="lc798x.c" type="1"/>
     <File name="lpc17xx_lib/include/lpc17xx_can.h" path="lpc17xx_lib/include/lpc17xx_can.h" type="1"/>
   </Files>
 </Project>
