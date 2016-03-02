@@ -1,0 +1,8 @@
+<map id="can_init" name="can_init">
+<area shape="rect" id="node2" href="$group___p_i_n_s_e_l___public___functions.html#ga771fcbed8f7ee806292e06e283611dc9" title="Configure Pin corresponding to specified parameters passed in the PinCfg. " alt="" coords="120,5,251,32"/>
+<area shape="rect" id="node3" href="$group___c_a_n___public___functions.html#ga2605eb2d985f919e2b591f6472a69c0a" title="CAN_Init" alt="" coords="149,56,222,83"/>
+<area shape="rect" id="node4" href="$group___c_a_n___public___functions.html#gab58915eb635f7035bc2e6520c03789d3" title="CAN_ModeConfig" alt="" coords="123,107,247,133"/>
+<area shape="rect" id="node5" href="$group___c_a_n___public___functions.html#ga0d0e0f7d8ea71a138fb100f2efdcaf1e" title="CAN_IRQCmd" alt="" coords="133,157,238,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.html#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="125,208,246,235"/>
+<area shape="rect" id="node7" href="$group___c_a_n___public___functions.html#gaaeb694de5c1f601e86f583a3fb028b73" title="CAN_SetAFMode" alt="" coords="123,259,248,285"/>
+</map>

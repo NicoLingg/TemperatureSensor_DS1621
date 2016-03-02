@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 4.8.2 i686-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DLPC1769 -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme\04_Projektarbeit\Temperatursensor_DS1621\lpc17xx_lib\include -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme\04_Projektarbeit\Temperatursensor_DS1621 -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme\04_Projektarbeit\Temperatursensor_DS1621\lpc17xx_lib -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme\04_Projektarbeit\Temperatursensor_DS1621\cmsis_boot -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme\04_Projektarbeit -I..\..\..\..\..\Users\Nico\Desktop\Studium_Schule\02_Master Mechatronik\2. Semester\Datenkommunikation mechatronischer Systeme\04_Projektarbeit\Temperatursensor_DS1621\cmsis">
+      <target file="lpc17xx_i2c.o" lastModified="14e4d975854">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_i2c.c" lastModified="14d4d76448b"/>
+      </target>
+      <target file="system_LPC17xx.o" lastModified="14e4d97557a">
+         <source file="..\..\..\cmsis_boot\system_LPC17xx.c" lastModified="14d4d763761"/>
+      </target>
+      <target file="startup_LPC17xx.o" lastModified="14e4d9756ec">
+         <source file="..\..\..\cmsis_boot\startup\startup_LPC17xx.c" lastModified="14d4d763757"/>
+      </target>
+      <target file="printf.o" lastModified="14e4d975692">
+         <source file="..\..\..\stdio\printf.c" lastModified="14d4d8725ca"/>
+      </target>
+      <target file="main.o" lastModified="14e4fcf3742">
+         <source file="..\..\..\main.c" lastModified="14e4fcf34fe"/>
+      </target>
+      <target file="lpc17xx_libcfg_default.o" lastModified="14e4d975750">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.c" lastModified="14d4d763784"/>
+      </target>
+      <target file="lpc17xx_can.o" lastModified="14e4d975494">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_can.c" lastModified="14d56eb84ae"/>
+      </target>
+      <target file="lc798x.o" lastModified="14e4d9758ea">
+         <source file="..\..\..\lc798x.c" lastModified="14c51c4d9cf"/>
+      </target>
+      <target file="lpc17xx_pinsel.o" lastModified="14e4d9757be">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_pinsel.c" lastModified="14d4d763798"/>
+      </target>
+      <target file="lpc17xx_clkpwr.o" lastModified="14e4d97550c">
+         <source file="..\..\..\lpc17xx_lib\source\lpc17xx_clkpwr.c" lastModified="14d4d76373e"/>
+      </target>
+   </processor>
+</history>

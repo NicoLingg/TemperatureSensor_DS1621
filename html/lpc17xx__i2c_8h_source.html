@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Aufgabe XVI: Temperatursensor DS1621: Temperatursensor_DS1621/lpc17xx_lib/include/lpc17xx_i2c.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Testaufbau.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Aufgabe XVI: Temperatursensor DS1621
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">M. Auer, N. Lingg, K. Maier</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="modules.html"><span>Module</span></a></li>
+      <li><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('lpc17xx__i2c_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">lpc17xx_i2c.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lpc17xx__i2c_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***********************************************************************/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* Peripheral group ----------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef LPC17XX_I2C_H_</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define LPC17XX_I2C_H_</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_l_p_c17xx_8h.html">LPC17xx.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lpc__types_8h.html">lpc_types.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* Private Macros ------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/* --------------------- BIT DEFINITIONS -------------------------------------- */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/*******************************************************************/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga784c4b2fe7f3299e338655d2ddbf283c">   50</a></span>&#160;<span class="preprocessor">#define I2C_I2CONSET_AA             ((0x04)) </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaa447cd2686805ef8009fc599144ee3dc">   51</a></span>&#160;<span class="preprocessor">#define I2C_I2CONSET_SI             ((0x08)) </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaae292803a059b84eac20ab8777d113af">   52</a></span>&#160;<span class="preprocessor">#define I2C_I2CONSET_STO            ((0x10)) </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gabaad3370eb35644c135d40f06adbbba0">   53</a></span>&#160;<span class="preprocessor">#define I2C_I2CONSET_STA            ((0x20)) </span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gab836acc31e0572bb0d0db614f0641f15">   54</a></span>&#160;<span class="preprocessor">#define I2C_I2CONSET_I2EN           ((0x40)) </span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="comment">/*******************************************************************/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaa13b19babb8442aa9047f8ecb92a908d">   60</a></span>&#160;<span class="preprocessor">#define I2C_I2CONCLR_AAC            ((1&lt;&lt;2))</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga36753112210a8c33d566b572b63b753b">   62</a></span>&#160;<span class="preprocessor">#define I2C_I2CONCLR_SIC            ((1&lt;&lt;3))</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gab6148bf41d7fc32bd259d2f6a7d7667d">   64</a></span>&#160;<span class="preprocessor">#define I2C_I2CONCLR_STAC           ((1&lt;&lt;5))</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga92718ac11d46f6e32d526749f09d01b2">   66</a></span>&#160;<span class="preprocessor">#define I2C_I2CONCLR_I2ENC          ((1&lt;&lt;6))</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/* Return Code in I2C status register */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gafeb8b5f682a81a2cc32f6c4b720a5e1f">   72</a></span>&#160;<span class="preprocessor">#define I2C_STAT_CODE_BITMASK       ((0xF8))</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/* I2C return status code definitions ----------------------------- */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga3e2ecdeb466041bb3cf435ccf36564d9">   77</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_NO_INF                       ((0xF8))</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/* Master transmit mode -------------------------------------------- */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga5c44c05176052f6040cd40d680bc2a91">   81</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_START                   ((0x08))</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gad41d0d1392b7d905b22b9c5015f2e48f">   83</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_RESTART                 ((0x10))</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gab91c158252efeb1a3a139faec3622ae0">   85</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_SLAW_ACK                ((0x18))</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga15729d9436fbf4c23a22e7cdbc913552">   87</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_SLAW_NACK               ((0x20))</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gad8c325e3c58aa8e7810797b9a6761596">   89</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_DAT_ACK                 ((0x28))</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga234f86990a6fd63f1d2064cbca4709a3">   91</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_DAT_NACK                ((0x30))</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga79230136402441c7e233c63fd2f71bdf">   93</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_TX_ARB_LOST                ((0x38))</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/* Master receive mode -------------------------------------------- */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gab1f79137c62e306269633b005ad936da">   97</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_START                   ((0x08))</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gacb1c9145acd64a77464017f1dd9279c5">   99</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_RESTART                 ((0x10))</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaed32dea40cf84a1efb09e0c389579163">  101</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_ARB_LOST                ((0x38))</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gacd29e4a94f8a533477dbbf026c0d525a">  103</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_SLAR_ACK                ((0x40))</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gafe156febe3313a9f3423776f97d0f24f">  105</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_SLAR_NACK               ((0x48))</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga2f07d3cfad351ba3c976d629db20cea2">  107</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_DAT_ACK                 ((0x50))</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga9cc5203175775bfa5ae6df5d6d98b014">  109</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_M_RX_DAT_NACK                ((0x58))</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">/* Slave receive mode -------------------------------------------- */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga7055c4b55feda352df8016cbca0c270b">  113</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_SLAW_ACK                ((0x60))</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaf13df6ed7d10be0e063bcbc04d329749">  116</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_ARB_LOST_M_SLA          ((0x68))</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">//#define I2C_I2STAT_S_RX_SLAW_ACK              ((0x68))</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gadcab34e87ad115c011e23a5bd4fb8aa3">  121</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_GENCALL_ACK             ((0x70))</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga1605c253472e071e7f77e51bda156ba7">  124</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_ARB_LOST_M_GENCALL      ((0x78))</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">//#define I2C_I2STAT_S_RX_GENCALL_ACK               ((0x78))</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga4342227592c3e2e345517bd3e6cd8089">  130</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_PRE_SLA_DAT_ACK         ((0x80))</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gace56a90d55426cc6ab2a4ca540c63d02">  133</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_PRE_SLA_DAT_NACK        ((0x88))</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga75dd46ddb054c4d47a531b8e90f7f446">  136</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_PRE_GENCALL_DAT_ACK     ((0x90))</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga20c65f8a82c18211127e5c335026bd76">  139</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_PRE_GENCALL_DAT_NACK    ((0x98))</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga7afe9f0e54aeb9ce8428c0adeb3c3274">  143</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_RX_STA_STO_SLVREC_SLVTRX   ((0xA0))</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gae6dcbdd1f01f7ebf3595722770e3b7b6">  147</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_TX_SLAR_ACK                ((0xA8))</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gac71ac23a80e1bdb700a2c37170031107">  150</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_TX_ARB_LOST_M_SLA          ((0xB0))</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">//#define I2C_I2STAT_S_TX_SLAR_ACK              ((0xB0))</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaeb92fe85cc3f6c813cb91685234ac08c">  155</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_TX_DAT_ACK                 ((0xB8))</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gad9cdcd8c06924252a2ad9baced97d838">  157</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_TX_DAT_NACK                ((0xC0))</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga3e4522387958da1da6017a6e48a0daad">  160</a></span>&#160;<span class="preprocessor">#define I2C_I2STAT_S_TX_LAST_DAT_ACK            ((0xC8))</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga33116b352c72ef28879812c66387f17a">  163</a></span>&#160;<span class="preprocessor">#define I2C_SLAVE_TIME_OUT                      0x10000UL</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gac66b7c81c93cc59f69d204b4eb7d639b">  169</a></span>&#160;<span class="preprocessor">#define I2C_I2DAT_BITMASK           ((0xFF))</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga5b04af302e0e4007df123dff0328ac5e">  174</a></span>&#160;<span class="preprocessor">#define I2C_I2DAT_IDLE_CHAR         (0xFF)</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga8dc8fa566a5113c3e1b35c0580d90d9f">  179</a></span>&#160;<span class="preprocessor">#define I2C_I2MMCTRL_MM_ENA         ((1&lt;&lt;0))        </span></div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gabf11567c27c48d795ba0f92cf636dab6">  180</a></span>&#160;<span class="preprocessor">#define I2C_I2MMCTRL_ENA_SCL        ((1&lt;&lt;1))        </span></div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gac7dd5efba503dd79c6b42f3575f70307">  181</a></span>&#160;<span class="preprocessor">#define I2C_I2MMCTRL_MATCH_ALL      ((1&lt;&lt;2))        </span></div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gadca0b6beb066a8f6689960c687334ac2">  182</a></span>&#160;<span class="preprocessor">#define I2C_I2MMCTRL_BITMASK        ((0x07))        </span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor"></span><span class="comment">/********************************************************************/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga95d605cbb817fa36d9c83545dd23fb5f">  188</a></span>&#160;<span class="preprocessor">#define I2DATA_BUFFER_BITMASK       ((0xFF))</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga2509515124601141b72080b5daf45009">  194</a></span>&#160;<span class="preprocessor">#define I2C_I2ADR_GC                ((1&lt;&lt;0))</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga8d5195514172b58efd29f09642566d37">  196</a></span>&#160;<span class="preprocessor">#define I2C_I2ADR_BITMASK           ((0xFF))</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga697da3f892d87fc247d6e1afafac5a34">  202</a></span>&#160;<span class="preprocessor">#define I2C_I2MASK_MASK(n)          ((n&amp;0xFE))</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gad6a9a202cf4d30607475338f7b59968a">  208</a></span>&#160;<span class="preprocessor">#define I2C_I2SCLH_BITMASK          ((0xFFFF))</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gadf54076e458f10fc00be5ed9504bc930">  214</a></span>&#160;<span class="preprocessor">#define I2C_I2SCLL_BITMASK          ((0xFFFF))</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">/* I2C status values */</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gae90c077796281121b65b80b661a23062">  217</a></span>&#160;<span class="preprocessor">#define I2C_SETUP_STATUS_ARBF   (1&lt;&lt;8)  </span></div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga90a37b470118d82b9682cfc2e0b4de84">  218</a></span>&#160;<span class="preprocessor">#define I2C_SETUP_STATUS_NOACKF (1&lt;&lt;9)  </span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gaefbb25ca99e199765e7dcdd6ef343590">  219</a></span>&#160;<span class="preprocessor">#define I2C_SETUP_STATUS_DONE   (1&lt;&lt;10) </span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor"></span><span class="comment">/*********************************************************************/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga5f79529ae357b8aa86e6ead24d95167e">  224</a></span>&#160;<span class="preprocessor">#define I2C_MONITOR_CFG_SCL_OUTPUT  I2C_I2MMCTRL_ENA_SCL        </span></div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gadd2b30f5b29839a83c893d88b8d09dd7">  225</a></span>&#160;<span class="preprocessor">#define I2C_MONITOR_CFG_MATCHALL    I2C_I2MMCTRL_MATCH_ALL      </span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor"></span><span class="comment">/* ---------------- CHECK PARAMETER DEFINITIONS ---------------------------- */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">/* Macros check I2C slave address */</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga48e3b6b2fe2e7cf9e500c23aac343a99">  229</a></span>&#160;<span class="preprocessor">#define PARAM_I2C_SLAVEADDR_CH(n)   ((n&gt;=0) &amp;&amp; (n&lt;=3))</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#ga27fcdfae701f8ce7ec72e5b1f8cd0511">  232</a></span>&#160;<span class="preprocessor">#define PARAM_I2Cx(n)   ((((uint32_t *)n)==((uint32_t *)LPC_I2C0)) \</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">|| (((uint32_t *)n)==((uint32_t *)LPC_I2C1)) \</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">|| (((uint32_t *)n)==((uint32_t *)LPC_I2C2)))</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">/* Macros check I2C monitor configuration type */</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="group___i2_c___private___macros.html#gae73e3b7919f9a726a0d8f275077e23d2">  237</a></span>&#160;<span class="preprocessor">#define PARAM_I2C_MONITOR_CFG(n) ((n==I2C_MONITOR_CFG_SCL_OUTPUT) || (I2C_MONITOR_CFG_MATCHALL))</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">/* Public Types --------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html">  253</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#aff00368cf36351f2ec4e17327951eb7f">  254</a></span>&#160;    uint8_t <a class="code" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#aff00368cf36351f2ec4e17327951eb7f">SlaveAddrChannel</a>;   </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#aefeb974677b767d84c5129ae6cffd0c0">  257</a></span>&#160;    uint8_t <a class="code" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#aefeb974677b767d84c5129ae6cffd0c0">SlaveAddr_7bit</a>;     </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#a8501ffa892984871e67b19088785299a">  258</a></span>&#160;    uint8_t <a class="code" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#a8501ffa892984871e67b19088785299a">GeneralCallState</a>;   </div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#a1c6fcdd559aa053a369b6eb485c4be29">  263</a></span>&#160;    uint8_t <a class="code" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#a1c6fcdd559aa053a369b6eb485c4be29">SlaveAddrMaskValue</a>; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;} <a class="code" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html">I2C_OWNSLAVEADDR_CFG_Type</a>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html">  277</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a4902d420a2d1b9715639e7acc5843281">  279</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#a4902d420a2d1b9715639e7acc5843281">sl_addr7bit</a>;                </div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a7668ceccad3cfceb0d2f53330ddea68b">  280</a></span>&#160;  uint8_t*          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#a7668ceccad3cfceb0d2f53330ddea68b">tx_data</a>;                    </div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#ac0dae38131a0a0786164fe9d1bc8f5a6">  282</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#ac0dae38131a0a0786164fe9d1bc8f5a6">tx_length</a>;                  </div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a45c3d5f3496c906efec9da0935a6a623">  284</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#a45c3d5f3496c906efec9da0935a6a623">tx_count</a>;                   </div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a8a4e2302651974da84f7b9904e8e1914">  285</a></span>&#160;  uint8_t*          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#a8a4e2302651974da84f7b9904e8e1914">rx_data</a>;                    </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a8418b12cfc7c31321dd7361d20849075">  287</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#a8418b12cfc7c31321dd7361d20849075">rx_length</a>;                  </div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#af251ff9839684a7ccd7e869d9c8f2c33">  289</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#af251ff9839684a7ccd7e869d9c8f2c33">rx_count</a>;                   </div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a808bcf1bd88eb24d1e8eda4197d83262">  290</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#a808bcf1bd88eb24d1e8eda4197d83262">retransmissions_max</a>;        </div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#aa8c340e9707632a8e1d93ce795f7508c">  291</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#aa8c340e9707632a8e1d93ce795f7508c">retransmissions_count</a>;      </div>
+<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#ade20423e91627f07e610924cb0081623">  292</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html#ade20423e91627f07e610924cb0081623">status</a>;                     </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="struct_i2_c___m___s_e_t_u_p___type.html#a11f084a69a85b6e1da79695b6a3d07c3">  293</a></span>&#160;  void              (*callback)(void);          </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;} <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html">I2C_M_SETUP_Type</a>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html">  301</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#a7668ceccad3cfceb0d2f53330ddea68b">  303</a></span>&#160;  uint8_t*          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#a7668ceccad3cfceb0d2f53330ddea68b">tx_data</a>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#ac0dae38131a0a0786164fe9d1bc8f5a6">  304</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#ac0dae38131a0a0786164fe9d1bc8f5a6">tx_length</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#a45c3d5f3496c906efec9da0935a6a623">  305</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#a45c3d5f3496c906efec9da0935a6a623">tx_count</a>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#a8a4e2302651974da84f7b9904e8e1914">  306</a></span>&#160;  uint8_t*          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#a8a4e2302651974da84f7b9904e8e1914">rx_data</a>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#a8418b12cfc7c31321dd7361d20849075">  307</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#a8418b12cfc7c31321dd7361d20849075">rx_length</a>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#af251ff9839684a7ccd7e869d9c8f2c33">  308</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#af251ff9839684a7ccd7e869d9c8f2c33">rx_count</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#ade20423e91627f07e610924cb0081623">  309</a></span>&#160;  uint32_t          <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html#ade20423e91627f07e610924cb0081623">status</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="struct_i2_c___s___s_e_t_u_p___type.html#a11f084a69a85b6e1da79695b6a3d07c3">  310</a></span>&#160;  void              (*callback)(void);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;} <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html">I2C_S_SETUP_Type</a>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="group___i2_c___public___types.html#gacbdb9912dc18d79d425d9ac7e1333095">  316</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="group___i2_c___public___types.html#ggacbdb9912dc18d79d425d9ac7e1333095a705c23545825458561fbfbf83393dc69">  317</a></span>&#160;    <a class="code" href="group___i2_c___public___types.html#ggacbdb9912dc18d79d425d9ac7e1333095a705c23545825458561fbfbf83393dc69">I2C_TRANSFER_POLLING</a> = 0,       </div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="group___i2_c___public___types.html#ggacbdb9912dc18d79d425d9ac7e1333095adcf6aee8de975dd710d711e590f3a753">  318</a></span>&#160;    <a class="code" href="group___i2_c___public___types.html#ggacbdb9912dc18d79d425d9ac7e1333095adcf6aee8de975dd710d711e590f3a753">I2C_TRANSFER_INTERRUPT</a>          </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;} <a class="code" href="group___i2_c___public___types.html#gacbdb9912dc18d79d425d9ac7e1333095">I2C_TRANSFER_OPT_Type</a>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">/* Public Functions ----------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">/* I2C Init/DeInit functions ---------- */</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#ga4f0c228696f1a8b60437241ba9af7455">I2C_Init</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, uint32_t clockrate);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#ga761d88cee2fa33f03e1c08c44057fc5b">I2C_DeInit</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a>* I2Cx);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">//void I2C_SetClock (LPC_I2C_TypeDef *I2Cx, uint32_t target_clock);</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#gae592e1754a5500b03a1bb92d30e04246">I2C_Cmd</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a>* I2Cx, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">/* I2C transfer data functions -------- */</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<a class="code" href="group___l_p_c___types___public___types.html#ga67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> <a class="code" href="group___i2_c___public___functions.html#ga102947f62951ca9031674c3df8117352">I2C_MasterTransferData</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, \</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <a class="code" href="struct_i2_c___m___s_e_t_u_p___type.html">I2C_M_SETUP_Type</a> *TransferCfg, <a class="code" href="group___i2_c___public___types.html#gacbdb9912dc18d79d425d9ac7e1333095">I2C_TRANSFER_OPT_Type</a> Opt);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<a class="code" href="group___l_p_c___types___public___types.html#ga67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> <a class="code" href="group___i2_c___public___functions.html#gab855dcf9fa8a95da591c532dbb92af31">I2C_SlaveTransferData</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, \</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="struct_i2_c___s___s_e_t_u_p___type.html">I2C_S_SETUP_Type</a> *TransferCfg, <a class="code" href="group___i2_c___public___types.html#gacbdb9912dc18d79d425d9ac7e1333095">I2C_TRANSFER_OPT_Type</a> Opt);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;uint32_t <a class="code" href="group___i2_c___public___functions.html#gaaad67181341bcd015c958f7d21420d01">I2C_MasterTransferComplete</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;uint32_t <a class="code" href="group___i2_c___public___functions.html#ga6380268c476af8b17b7ef13f05e404d4">I2C_SlaveTransferComplete</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#ga04a15375bbb68c96a97279b192ee7a5a">I2C_SetOwnSlaveAddr</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, <a class="code" href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html">I2C_OWNSLAVEADDR_CFG_Type</a> *OwnSlaveAddrConfigStruct);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;uint8_t <a class="code" href="group___i2_c___public___functions.html#ga268c8c03cf0f006b58d0e9ad8c00e141">I2C_GetLastStatusCode</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a>* I2Cx);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">/* I2C Monitor functions ---------------*/</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#gaef7e2d007e73a69844eafebfbc3e6862">I2C_MonitorModeConfig</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, uint32_t MonitorCfgType, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#ga236d51a39fe46151b144b56f3d5d465a">I2C_MonitorModeCmd</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;uint8_t <a class="code" href="group___i2_c___public___functions.html#gaeef5efb68afc2a65ffa08572d46fd472">I2C_MonitorGetDatabuffer</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<a class="code" href="group___l_p_c___types___public___types.html#ga39db6982619d623273fad8a383489309">BOOL_8</a> <a class="code" href="group___i2_c___public___functions.html#gaa8f87a55b16bacca9110c11ff285d3f9">I2C_MonitorHandler</a>(<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, uint8_t *buffer, uint32_t size);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">/* I2C Interrupt handler functions ------*/</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#gabdabf69925593fb4a7d93f576fe4818b">I2C_IntCmd</a> (<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx, <a class="code" href="group___l_p_c___types___public___types.html#ga39db6982619d623273fad8a383489309">Bool</a> NewState);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#ga2a72b0df9f2df2190c02f44bc5de8f0c">I2C_MasterHandler</a> (<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c___public___functions.html#gad6be7f7f521b9838d05cb033caae68d0">I2C_SlaveHandler</a> (<a class="code" href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a> *I2Cx);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LPC17XX_I2C_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">/* --------------------------------- End Of File ------------------------------ */</span></div>
+<div class="ttc" id="group___i2_c___public___types_html_ggacbdb9912dc18d79d425d9ac7e1333095adcf6aee8de975dd710d711e590f3a753"><div class="ttname"><a href="group___i2_c___public___types.html#ggacbdb9912dc18d79d425d9ac7e1333095adcf6aee8de975dd710d711e590f3a753">I2C_TRANSFER_INTERRUPT</a></div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:318</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_a808bcf1bd88eb24d1e8eda4197d83262"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#a808bcf1bd88eb24d1e8eda4197d83262">I2C_M_SETUP_Type::retransmissions_max</a></div><div class="ttdeci">uint32_t retransmissions_max</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:290</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga04a15375bbb68c96a97279b192ee7a5a"><div class="ttname"><a href="group___i2_c___public___functions.html#ga04a15375bbb68c96a97279b192ee7a5a">I2C_SetOwnSlaveAddr</a></div><div class="ttdeci">void I2C_SetOwnSlaveAddr(LPC_I2C_TypeDef *I2Cx, I2C_OWNSLAVEADDR_CFG_Type *OwnSlaveAddrConfigStruct)</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_a7668ceccad3cfceb0d2f53330ddea68b"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#a7668ceccad3cfceb0d2f53330ddea68b">I2C_M_SETUP_Type::tx_data</a></div><div class="ttdeci">uint8_t * tx_data</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:280</div></div>
+<div class="ttc" id="group___l_p_c___types___public___types_html_ga39db6982619d623273fad8a383489309"><div class="ttname"><a href="group___l_p_c___types___public___types.html#ga39db6982619d623273fad8a383489309">Bool</a></div><div class="ttdeci">Bool</div><div class="ttdoc">Boolean Type definition. </div><div class="ttdef"><b>Definition:</b> lpc_types.h:44</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_af251ff9839684a7ccd7e869d9c8f2c33"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#af251ff9839684a7ccd7e869d9c8f2c33">I2C_M_SETUP_Type::rx_count</a></div><div class="ttdeci">uint32_t rx_count</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:289</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_ade20423e91627f07e610924cb0081623"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#ade20423e91627f07e610924cb0081623">I2C_S_SETUP_Type::status</a></div><div class="ttdeci">uint32_t status</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:309</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_a8418b12cfc7c31321dd7361d20849075"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#a8418b12cfc7c31321dd7361d20849075">I2C_M_SETUP_Type::rx_length</a></div><div class="ttdeci">uint32_t rx_length</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:287</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_ac0dae38131a0a0786164fe9d1bc8f5a6"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#ac0dae38131a0a0786164fe9d1bc8f5a6">I2C_M_SETUP_Type::tx_length</a></div><div class="ttdeci">uint32_t tx_length</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:282</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_a8a4e2302651974da84f7b9904e8e1914"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#a8a4e2302651974da84f7b9904e8e1914">I2C_M_SETUP_Type::rx_data</a></div><div class="ttdeci">uint8_t * rx_data</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:285</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_a8a4e2302651974da84f7b9904e8e1914"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#a8a4e2302651974da84f7b9904e8e1914">I2C_S_SETUP_Type::rx_data</a></div><div class="ttdeci">uint8_t * rx_data</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:306</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gad6be7f7f521b9838d05cb033caae68d0"><div class="ttname"><a href="group___i2_c___public___functions.html#gad6be7f7f521b9838d05cb033caae68d0">I2C_SlaveHandler</a></div><div class="ttdeci">void I2C_SlaveHandler(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gabdabf69925593fb4a7d93f576fe4818b"><div class="ttname"><a href="group___i2_c___public___functions.html#gabdabf69925593fb4a7d93f576fe4818b">I2C_IntCmd</a></div><div class="ttdeci">void I2C_IntCmd(LPC_I2C_TypeDef *I2Cx, Bool NewState)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gaaad67181341bcd015c958f7d21420d01"><div class="ttname"><a href="group___i2_c___public___functions.html#gaaad67181341bcd015c958f7d21420d01">I2C_MasterTransferComplete</a></div><div class="ttdeci">uint32_t I2C_MasterTransferComplete(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga102947f62951ca9031674c3df8117352"><div class="ttname"><a href="group___i2_c___public___functions.html#ga102947f62951ca9031674c3df8117352">I2C_MasterTransferData</a></div><div class="ttdeci">Status I2C_MasterTransferData(LPC_I2C_TypeDef *I2Cx, I2C_M_SETUP_Type *TransferCfg, I2C_TRANSFER_OPT_Type Opt)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga6380268c476af8b17b7ef13f05e404d4"><div class="ttname"><a href="group___i2_c___public___functions.html#ga6380268c476af8b17b7ef13f05e404d4">I2C_SlaveTransferComplete</a></div><div class="ttdeci">uint32_t I2C_SlaveTransferComplete(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga236d51a39fe46151b144b56f3d5d465a"><div class="ttname"><a href="group___i2_c___public___functions.html#ga236d51a39fe46151b144b56f3d5d465a">I2C_MonitorModeCmd</a></div><div class="ttdeci">void I2C_MonitorModeCmd(LPC_I2C_TypeDef *I2Cx, FunctionalState NewState)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga2a72b0df9f2df2190c02f44bc5de8f0c"><div class="ttname"><a href="group___i2_c___public___functions.html#ga2a72b0df9f2df2190c02f44bc5de8f0c">I2C_MasterHandler</a></div><div class="ttdeci">void I2C_MasterHandler(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html">I2C_S_SETUP_Type</a></div><div class="ttdoc">Slave transfer setup data structure definitions. </div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:301</div></div>
+<div class="ttc" id="group___l_p_c___types___public___types_html_gac9a7e9a35d2513ec15c3b537aaa4fba1"><div class="ttname"><a href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a></div><div class="ttdeci">FunctionalState</div><div class="ttdoc">Functional State Definition. </div><div class="ttdef"><b>Definition:</b> lpc_types.h:55</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gab855dcf9fa8a95da591c532dbb92af31"><div class="ttname"><a href="group___i2_c___public___functions.html#gab855dcf9fa8a95da591c532dbb92af31">I2C_SlaveTransferData</a></div><div class="ttdeci">Status I2C_SlaveTransferData(LPC_I2C_TypeDef *I2Cx, I2C_S_SETUP_Type *TransferCfg, I2C_TRANSFER_OPT_Type Opt)</div></div>
+<div class="ttc" id="group___l_p_c___types___public___types_html_ga67a0db04d321a74b7e7fcfd3f1a3f70b"><div class="ttname"><a href="group___l_p_c___types___public___types.html#ga67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> lpc_types.h:61</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gaa8f87a55b16bacca9110c11ff285d3f9"><div class="ttname"><a href="group___i2_c___public___functions.html#gaa8f87a55b16bacca9110c11ff285d3f9">I2C_MonitorHandler</a></div><div class="ttdeci">BOOL_8 I2C_MonitorHandler(LPC_I2C_TypeDef *I2Cx, uint8_t *buffer, uint32_t size)</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_ade20423e91627f07e610924cb0081623"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#ade20423e91627f07e610924cb0081623">I2C_M_SETUP_Type::status</a></div><div class="ttdeci">uint32_t status</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:292</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_a8418b12cfc7c31321dd7361d20849075"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#a8418b12cfc7c31321dd7361d20849075">I2C_S_SETUP_Type::rx_length</a></div><div class="ttdeci">uint32_t rx_length</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:307</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_a7668ceccad3cfceb0d2f53330ddea68b"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#a7668ceccad3cfceb0d2f53330ddea68b">I2C_S_SETUP_Type::tx_data</a></div><div class="ttdeci">uint8_t * tx_data</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:303</div></div>
+<div class="ttc" id="lpc__types_8h_html"><div class="ttname"><a href="lpc__types_8h.html">lpc_types.h</a></div><div class="ttdoc">Contains the NXP ABL typedefs for C standard types. It is intended to be used in ISO C conforming dev...</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_a4902d420a2d1b9715639e7acc5843281"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#a4902d420a2d1b9715639e7acc5843281">I2C_M_SETUP_Type::sl_addr7bit</a></div><div class="ttdeci">uint32_t sl_addr7bit</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:279</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_a45c3d5f3496c906efec9da0935a6a623"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#a45c3d5f3496c906efec9da0935a6a623">I2C_S_SETUP_Type::tx_count</a></div><div class="ttdeci">uint32_t tx_count</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:305</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gaeef5efb68afc2a65ffa08572d46fd472"><div class="ttname"><a href="group___i2_c___public___functions.html#gaeef5efb68afc2a65ffa08572d46fd472">I2C_MonitorGetDatabuffer</a></div><div class="ttdeci">uint8_t I2C_MonitorGetDatabuffer(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html">I2C_M_SETUP_Type</a></div><div class="ttdoc">Master transfer setup data structure definitions. </div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:277</div></div>
+<div class="ttc" id="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type_html_aefeb974677b767d84c5129ae6cffd0c0"><div class="ttname"><a href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#aefeb974677b767d84c5129ae6cffd0c0">I2C_OWNSLAVEADDR_CFG_Type::SlaveAddr_7bit</a></div><div class="ttdeci">uint8_t SlaveAddr_7bit</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:257</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga4f0c228696f1a8b60437241ba9af7455"><div class="ttname"><a href="group___i2_c___public___functions.html#ga4f0c228696f1a8b60437241ba9af7455">I2C_Init</a></div><div class="ttdeci">void I2C_Init(LPC_I2C_TypeDef *I2Cx, uint32_t clockrate)</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_af251ff9839684a7ccd7e869d9c8f2c33"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#af251ff9839684a7ccd7e869d9c8f2c33">I2C_S_SETUP_Type::rx_count</a></div><div class="ttdeci">uint32_t rx_count</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:308</div></div>
+<div class="ttc" id="struct_l_p_c___i2_c___type_def_html"><div class="ttname"><a href="struct_l_p_c___i2_c___type_def.html">LPC_I2C_TypeDef</a></div><div class="ttdoc">Inter-Integrated Circuit (I2C) register structure definition. </div><div class="ttdef"><b>Definition:</b> LPC17xx.h:471</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_aa8c340e9707632a8e1d93ce795f7508c"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#aa8c340e9707632a8e1d93ce795f7508c">I2C_M_SETUP_Type::retransmissions_count</a></div><div class="ttdeci">uint32_t retransmissions_count</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:291</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gaef7e2d007e73a69844eafebfbc3e6862"><div class="ttname"><a href="group___i2_c___public___functions.html#gaef7e2d007e73a69844eafebfbc3e6862">I2C_MonitorModeConfig</a></div><div class="ttdeci">void I2C_MonitorModeConfig(LPC_I2C_TypeDef *I2Cx, uint32_t MonitorCfgType, FunctionalState NewState)</div></div>
+<div class="ttc" id="group___i2_c___public___types_html_ggacbdb9912dc18d79d425d9ac7e1333095a705c23545825458561fbfbf83393dc69"><div class="ttname"><a href="group___i2_c___public___types.html#ggacbdb9912dc18d79d425d9ac7e1333095a705c23545825458561fbfbf83393dc69">I2C_TRANSFER_POLLING</a></div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:317</div></div>
+<div class="ttc" id="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type_html_aff00368cf36351f2ec4e17327951eb7f"><div class="ttname"><a href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#aff00368cf36351f2ec4e17327951eb7f">I2C_OWNSLAVEADDR_CFG_Type::SlaveAddrChannel</a></div><div class="ttdeci">uint8_t SlaveAddrChannel</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:254</div></div>
+<div class="ttc" id="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type_html"><div class="ttname"><a href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html">I2C_OWNSLAVEADDR_CFG_Type</a></div><div class="ttdoc">I2C Own slave address setting structure. </div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:253</div></div>
+<div class="ttc" id="_l_p_c17xx_8h_html"><div class="ttname"><a href="_l_p_c17xx_8h.html">LPC17xx.h</a></div><div class="ttdoc">CMSIS Cortex-M3 Core Peripheral Access Layer Header File for NXP LPC17xx Device Series. </div></div>
+<div class="ttc" id="group___i2_c___public___types_html_gacbdb9912dc18d79d425d9ac7e1333095"><div class="ttname"><a href="group___i2_c___public___types.html#gacbdb9912dc18d79d425d9ac7e1333095">I2C_TRANSFER_OPT_Type</a></div><div class="ttdeci">I2C_TRANSFER_OPT_Type</div><div class="ttdoc">Transfer option type definitions. </div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:316</div></div>
+<div class="ttc" id="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type_html_a1c6fcdd559aa053a369b6eb485c4be29"><div class="ttname"><a href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#a1c6fcdd559aa053a369b6eb485c4be29">I2C_OWNSLAVEADDR_CFG_Type::SlaveAddrMaskValue</a></div><div class="ttdeci">uint8_t SlaveAddrMaskValue</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:263</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga268c8c03cf0f006b58d0e9ad8c00e141"><div class="ttname"><a href="group___i2_c___public___functions.html#ga268c8c03cf0f006b58d0e9ad8c00e141">I2C_GetLastStatusCode</a></div><div class="ttdeci">uint8_t I2C_GetLastStatusCode(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="struct_i2_c___m___s_e_t_u_p___type_html_a45c3d5f3496c906efec9da0935a6a623"><div class="ttname"><a href="struct_i2_c___m___s_e_t_u_p___type.html#a45c3d5f3496c906efec9da0935a6a623">I2C_M_SETUP_Type::tx_count</a></div><div class="ttdeci">uint32_t tx_count</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:284</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_ga761d88cee2fa33f03e1c08c44057fc5b"><div class="ttname"><a href="group___i2_c___public___functions.html#ga761d88cee2fa33f03e1c08c44057fc5b">I2C_DeInit</a></div><div class="ttdeci">void I2C_DeInit(LPC_I2C_TypeDef *I2Cx)</div></div>
+<div class="ttc" id="group___i2_c___public___functions_html_gae592e1754a5500b03a1bb92d30e04246"><div class="ttname"><a href="group___i2_c___public___functions.html#gae592e1754a5500b03a1bb92d30e04246">I2C_Cmd</a></div><div class="ttdeci">void I2C_Cmd(LPC_I2C_TypeDef *I2Cx, FunctionalState NewState)</div></div>
+<div class="ttc" id="struct_i2_c___s___s_e_t_u_p___type_html_ac0dae38131a0a0786164fe9d1bc8f5a6"><div class="ttname"><a href="struct_i2_c___s___s_e_t_u_p___type.html#ac0dae38131a0a0786164fe9d1bc8f5a6">I2C_S_SETUP_Type::tx_length</a></div><div class="ttdeci">uint32_t tx_length</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:304</div></div>
+<div class="ttc" id="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type_html_a8501ffa892984871e67b19088785299a"><div class="ttname"><a href="struct_i2_c___o_w_n_s_l_a_v_e_a_d_d_r___c_f_g___type.html#a8501ffa892984871e67b19088785299a">I2C_OWNSLAVEADDR_CFG_Type::GeneralCallState</a></div><div class="ttdeci">uint8_t GeneralCallState</div><div class="ttdef"><b>Definition:</b> lpc17xx_i2c.h:258</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_958ed0026fbcc81338a971a91e34e257.html">Temperatursensor_DS1621</a></li><li class="navelem"><a class="el" href="dir_0e25ba2f3067cc11b93a8995f35b1dd4.html">lpc17xx_lib</a></li><li class="navelem"><a class="el" href="dir_d365cc23236bd6c83e0e37b7f7ba1352.html">include</a></li><li class="navelem"><a class="el" href="lpc17xx__i2c_8h.html">lpc17xx_i2c.h</a></li>
+    <li class="footer">Erzeugt am Don Jun 11 2015 18:43:33 für Aufgabe XVI: Temperatursensor DS1621 von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

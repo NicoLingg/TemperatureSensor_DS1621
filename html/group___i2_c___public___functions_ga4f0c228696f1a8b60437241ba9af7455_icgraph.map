@@ -1,0 +1,5 @@
+<map id="I2C_Init" name="I2C_Init">
+<area shape="rect" id="node2" href="$main_8c.html#a7e4166cbb6ecdbaf5b5d11e29716ef73" title="I2C&#45;Initialisierung: " alt="" coords="119,5,184,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="232,5,283,32"/>
+<area shape="rect" id="node4" href="$startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="331,5,485,32"/>
+</map>

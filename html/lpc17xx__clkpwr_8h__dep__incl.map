@@ -1,0 +1,5 @@
+<map id="Temperatursensor_DS1621/lpc17xx_lib/include/lpc17xx_clkpwr.h" name="Temperatursensor_DS1621/lpc17xx_lib/include/lpc17xx_clkpwr.h">
+<area shape="rect" id="node2" href="$lpc17xx__can_8c.html" title="Contains all functions support for CAN firmware library on LPC17xx. " alt="" coords="5,117,228,158"/>
+<area shape="rect" id="node3" href="$lpc17xx__clkpwr_8c.html" title="Contains all functions support for Clock and Power Control firmware library on LPC17xx. " alt="" coords="252,109,435,165"/>
+<area shape="rect" id="node4" href="$lpc17xx__i2c_8c.html" title="Contains all functions support for I2C firmware library on LPC17xx. " alt="" coords="459,117,678,158"/>
+</map>

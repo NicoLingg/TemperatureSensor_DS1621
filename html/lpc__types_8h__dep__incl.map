@@ -1,0 +1,14 @@
+<map id="Temperatursensor_DS1621/lpc17xx_lib/include/lpc_types.h" name="Temperatursensor_DS1621/lpc17xx_lib/include/lpc_types.h">
+<area shape="rect" id="node2" href="$lc798x_8c.html" title="Temperatursensor_DS1621\l/lc798x.c" alt="" coords="5,117,184,158"/>
+<area shape="rect" id="node3" href="$lpc17xx__can_8h.html" title="Contains all macro definitions and function prototypes support for CAN firmware library on LPC17xx..." alt="" coords="419,117,643,158"/>
+<area shape="rect" id="node6" href="$lpc17xx__clkpwr_8h.html" title="Contains all macro definitions and function prototypes support for Clock and Power Control firmware l..." alt="" coords="209,109,394,165"/>
+<area shape="rect" id="node9" href="$lpc17xx__i2c_8h.html" title="Contains all macro definitions and function prototypes support for I2C firmware library on LPC17xx..." alt="" coords="877,117,1097,158"/>
+<area shape="rect" id="node10" href="$lpc17xx__libcfg__default_8h.html" title="Default Library configuration header file. " alt="" coords="667,109,853,165"/>
+<area shape="rect" id="node12" href="$lpc17xx__pinsel_8h.html" title="Contains all macro definitions and function prototypes support for Pin connect block firmware library..." alt="" coords="1121,109,1306,165"/>
+<area shape="rect" id="node4" href="$lpc17xx__can_8c.html" title="Contains all functions support for CAN firmware library on LPC17xx. " alt="" coords="319,221,542,262"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="Temperatursensor_DS1621\l/main.c" alt="" coords="1016,221,1195,262"/>
+<area shape="rect" id="node7" href="$lpc17xx__clkpwr_8c.html" title="Contains all functions support for Clock and Power Control firmware library on LPC17xx. " alt="" coords="113,213,295,269"/>
+<area shape="rect" id="node8" href="$lpc17xx__i2c_8c.html" title="Contains all functions support for I2C firmware library on LPC17xx. " alt="" coords="773,221,992,262"/>
+<area shape="rect" id="node11" href="$lpc17xx__libcfg__default_8c.html" title="Library configuration source file (default), used to build library without examples. " alt="" coords="566,213,749,269"/>
+<area shape="rect" id="node13" href="$lpc17xx__pinsel_8c.html" title="Contains all functions support for Pin connect block firmware library on LPC17xx. ..." alt="" coords="1219,213,1402,269"/>
+</map>

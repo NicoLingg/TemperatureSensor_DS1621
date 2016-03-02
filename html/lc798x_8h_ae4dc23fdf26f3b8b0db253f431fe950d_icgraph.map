@@ -1,0 +1,6 @@
+<map id="lcd_clear_screen" name="lcd_clear_screen">
+<area shape="rect" id="node2" href="$main_8c.html#ae7e748225f06b448b9637a13374e252f" title="LCD&#45;Initialisierung: " alt="" coords="205,5,275,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a9d2717ed70585c74e4cfcf7e9586b305" title="Initialausgabe des LCDs " alt="" coords="173,56,307,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="355,31,405,57"/>
+<area shape="rect" id="node4" href="$startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="453,31,608,57"/>
+</map>

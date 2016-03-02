@@ -1,0 +1,5 @@
+<map id="Init_I2C" name="Init_I2C">
+<area shape="rect" id="node2" href="$group___p_i_n_s_e_l___public___functions.html#ga771fcbed8f7ee806292e06e283611dc9" title="Configure Pin corresponding to specified parameters passed in the PinCfg. " alt="" coords="119,5,249,32"/>
+<area shape="rect" id="node3" href="$group___i2_c___public___functions.html#ga4f0c228696f1a8b60437241ba9af7455" title="I2C_Init" alt="" coords="151,56,217,83"/>
+<area shape="rect" id="node4" href="$group___i2_c___public___functions.html#gae592e1754a5500b03a1bb92d30e04246" title="I2C_Cmd" alt="" coords="147,107,221,133"/>
+</map>

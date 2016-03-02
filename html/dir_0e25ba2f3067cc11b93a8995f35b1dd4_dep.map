@@ -1,0 +1,9 @@
+<map id="Temperatursensor_DS1621/lpc17xx_lib" name="Temperatursensor_DS1621/lpc17xx_lib">
+<area shape="rect" id="node2" href="dir_d365cc23236bd6c83e0e37b7f7ba1352.html" title="include" alt="" coords="37,159,109,207"/>
+<area shape="rect" id="node4" href="dir_2440b3a97457b1fa53e0bc8d0377ebf9.html" title="cmsis_boot" alt="" coords="29,255,118,303"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000005_000002.html" title="4" alt="" coords="78,229,86,244"/>
+<area shape="rect" id="node3" href="dir_431af0f109a67d2075033a1457c91469.html" title="source" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000006_000005.html" title="10" alt="" coords="74,133,89,148"/>
+<area shape="rect" id="clust2" href="dir_0e25ba2f3067cc11b93a8995f35b1dd4.html" alt="" coords="27,52,232,217"/>
+<area shape="rect" id="clust1" href="dir_958ed0026fbcc81338a971a91e34e257.html" title="Temperatursensor_DS1621" alt="" coords="16,16,243,228"/>
+</map>

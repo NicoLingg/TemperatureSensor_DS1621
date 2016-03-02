@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Aufgabe XVI: Temperatursensor DS1621: Temperatursensor_DS1621/main.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Testaufbau.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Aufgabe XVI: Temperatursensor DS1621
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">M. Auer, N. Lingg, K. Maier</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="modules.html"><span>Module</span></a></li>
+      <li><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('main_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<div class="title">main.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_l_p_c17xx_8h_source.html">LPC17xx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lpc17xx__i2c_8h_source.html">lpc17xx_i2c.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lpc17xx__can_8h_source.html">lpc17xx_can.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lpc17xx__libcfg__default_8h_source.html">lpc17xx_libcfg_default.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lpc17xx__pinsel_8h_source.html">lpc17xx_pinsel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lc798x_8h_source.html">lc798x.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#_temperatursensor___d_s1621_2main_8c" alt=""/></div>
+<map name="_temperatursensor___d_s1621_2main_8c" id="_temperatursensor___d_s1621_2main_8c">
+<area shape="rect" id="node2" href="_l_p_c17xx_8h.html" title="CMSIS Cortex&#45;M3 Core Peripheral Access Layer Header File for NXP LPC17xx Device Series. " alt="" coords="470,169,557,196"/><area shape="rect" id="node8" href="lpc17xx__i2c_8h.html" title="Contains all macro definitions and function prototypes support for I2C firmware library on LPC17xx..." alt="" coords="333,95,435,121"/><area shape="rect" id="node10" href="lpc17xx__can_8h.html" title="Contains all macro definitions and function prototypes support for CAN firmware library on LPC17xx..." alt="" coords="460,95,567,121"/><area shape="rect" id="node11" href="lpc17xx__libcfg__default_8h.html" title="Default Library configuration header file. " alt="" coords="5,95,165,121"/><area shape="rect" id="node12" href="lpc17xx__pinsel_8h.html" title="Contains all macro definitions and function prototypes support for Pin connect block firmware library..." alt="" coords="190,95,309,121"/><area shape="rect" id="node13" href="lc798x_8h.html" title="lc798x.h" alt="" coords="642,95,713,121"/><area shape="rect" id="node3" href="core__cm3_8h.html" title="CMSIS Cortex&#45;M3 Core Peripheral Access Layer Header File. " alt="" coords="524,244,615,271"/><area shape="rect" id="node7" href="system___l_p_c17xx_8h.html" title="CMSIS Cortex&#45;M3 Device Peripheral Access Layer Header File for the NXP LPC17xx Device Series..." alt="" coords="364,244,500,271"/><area shape="rect" id="node5" href="core__cm_instr_8h.html" title="CMSIS Cortex&#45;M Core Instruction Access Header File. " alt="" coords="502,319,610,345"/><area shape="rect" id="node6" href="core__cm_func_8h.html" title="CMSIS Cortex&#45;M Core Function Access Header File. " alt="" coords="635,319,747,345"/><area shape="rect" id="node9" href="lpc__types_8h.html" title="Contains the NXP ABL typedefs for C standard types. It is intended to be used in ISO C conforming dev..." alt="" coords="282,169,371,196"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:aaf6652a0511f15cf4225d30387874344"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aaf6652a0511f15cf4225d30387874344">I2CDEV_S_ADDR</a>&#160;&#160;&#160;0x4F</td></tr>
+<tr class="separator:aaf6652a0511f15cf4225d30387874344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca7e6ad3b3559dede1ff7e71825237f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aeca7e6ad3b3559dede1ff7e71825237f">I2CDEV_M</a>&#160;&#160;&#160;<a class="el" href="group___l_p_c17xx___system.html#gad6d6333e47875813be171cffef258837">LPC_I2C1</a></td></tr>
+<tr class="separator:aeca7e6ad3b3559dede1ff7e71825237f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9029456b4e2e7778b779a4c3c03ac38f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9029456b4e2e7778b779a4c3c03ac38f">CAN_IDENTIFIER</a>&#160;&#160;&#160;0x854;</td></tr>
+<tr class="separator:a9029456b4e2e7778b779a4c3c03ac38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ba16a504690086a7a28a01172771be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af5ba16a504690086a7a28a01172771be">CAN_PERIPHERAL</a>&#160;&#160;&#160;<a class="el" href="group___l_p_c17xx___system.html#ga2f006d6888921f8336dce504eb56f4aa">LPC_CAN1</a></td></tr>
+<tr class="separator:af5ba16a504690086a7a28a01172771be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf759eea88150fb39deec8ff2edb6df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aeaf759eea88150fb39deec8ff2edb6df">ACCESS_CONFIG</a>&#160;&#160;&#160;0xAC</td></tr>
+<tr class="separator:aeaf759eea88150fb39deec8ff2edb6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353d695caf812c38a42b06916fee0751"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a353d695caf812c38a42b06916fee0751">SET_UP</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a353d695caf812c38a42b06916fee0751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203d0b4b0357f9d9296b77acacf85c9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a203d0b4b0357f9d9296b77acacf85c9b">START_CONVERT_T</a>&#160;&#160;&#160;0xEE</td></tr>
+<tr class="separator:a203d0b4b0357f9d9296b77acacf85c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc211ccf660abfdbc1b27506dabbe224"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abc211ccf660abfdbc1b27506dabbe224">READ_TEMPERATURE</a>&#160;&#160;&#160;0xAA</td></tr>
+<tr class="separator:abc211ccf660abfdbc1b27506dabbe224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:abee0b2208e1314912cb1a9433720d704"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abee0b2208e1314912cb1a9433720d704">Init_System</a> (void)</td></tr>
+<tr class="memdesc:abee0b2208e1314912cb1a9433720d704"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>System-Initialisierung<b>: </b></b> <a href="#abee0b2208e1314912cb1a9433720d704">Mehr ...</a><br /></td></tr>
+<tr class="separator:abee0b2208e1314912cb1a9433720d704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e748225f06b448b9637a13374e252f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae7e748225f06b448b9637a13374e252f">Init_LCD</a> (void)</td></tr>
+<tr class="memdesc:ae7e748225f06b448b9637a13374e252f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>LCD-Initialisierung<b>: </b></b> <a href="#ae7e748225f06b448b9637a13374e252f">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae7e748225f06b448b9637a13374e252f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4166cbb6ecdbaf5b5d11e29716ef73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7e4166cbb6ecdbaf5b5d11e29716ef73">Init_I2C</a> (void)</td></tr>
+<tr class="memdesc:a7e4166cbb6ecdbaf5b5d11e29716ef73"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>I2C-Initialisierung<b>: </b></b> <a href="#a7e4166cbb6ecdbaf5b5d11e29716ef73">Mehr ...</a><br /></td></tr>
+<tr class="separator:a7e4166cbb6ecdbaf5b5d11e29716ef73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2717ed70585c74e4cfcf7e9586b305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9d2717ed70585c74e4cfcf7e9586b305">LCD_Initialausgabe</a> (void)</td></tr>
+<tr class="memdesc:a9d2717ed70585c74e4cfcf7e9586b305"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Initialausgabe des LCDs<b> </b></b> <a href="#a9d2717ed70585c74e4cfcf7e9586b305">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9d2717ed70585c74e4cfcf7e9586b305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd1bbaa238adee80a0145ca7c6ce4c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aabd1bbaa238adee80a0145ca7c6ce4c6">DS1621_Init</a> (void)</td></tr>
+<tr class="memdesc:aabd1bbaa238adee80a0145ca7c6ce4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>DS1621 einschalten<b>: </b></b> <a href="#aabd1bbaa238adee80a0145ca7c6ce4c6">Mehr ...</a><br /></td></tr>
+<tr class="separator:aabd1bbaa238adee80a0145ca7c6ce4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7781a37ca14c5bf42c4fe9de1f4daa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac7781a37ca14c5bf42c4fe9de1f4daa8">can_init</a> (void)</td></tr>
+<tr class="memdesc:ac7781a37ca14c5bf42c4fe9de1f4daa8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>CAN-Initialisierung<b>: </b></b> <a href="#ac7781a37ca14c5bf42c4fe9de1f4daa8">Mehr ...</a><br /></td></tr>
+<tr class="separator:ac7781a37ca14c5bf42c4fe9de1f4daa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dccc2054070aae79797f9363482420e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3dccc2054070aae79797f9363482420e">Timer0_DelayMs</a> (uint32_t delayInMs)</td></tr>
+<tr class="memdesc:a3dccc2054070aae79797f9363482420e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Warte-Funktion mit Timer0<b>: </b></b> <a href="#a3dccc2054070aae79797f9363482420e">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3dccc2054070aae79797f9363482420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Main-Programm<b>: </b></b> <a href="#a840291bc02cba5474a4cb46a9b9566fe">Mehr ...</a><br /></td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a6c1861562de158a27a18235880267a48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_a_n___m_s_g___type.html">CAN_MSG_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6c1861562de158a27a18235880267a48">TXMsg</a></td></tr>
+<tr class="separator:a6c1861562de158a27a18235880267a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce78e64e33819824c357a0e6c6cb6c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i2_c___m___s_e_t_u_p___type.html">I2C_M_SETUP_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adce78e64e33819824c357a0e6c6cb6c7">transferMCfg</a></td></tr>
+<tr class="separator:adce78e64e33819824c357a0e6c6cb6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb82839a7dd0b5a5d344c824e2cc0c6d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adb82839a7dd0b5a5d344c824e2cc0c6d">Master_Buf</a> [2]</td></tr>
+<tr class="separator:adb82839a7dd0b5a5d344c824e2cc0c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22083417a01d43ffea7085cbbc712a47"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a22083417a01d43ffea7085cbbc712a47">Temperatur</a> [2]</td></tr>
+<tr class="separator:a22083417a01d43ffea7085cbbc712a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a class="anchor" id="aeaf759eea88150fb39deec8ff2edb6df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACCESS_CONFIG&#160;&#160;&#160;0xAC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Aktivierung zum Schreiben in das Register </p>
+
+</div>
+</div>
+<a class="anchor" id="a9029456b4e2e7778b779a4c3c03ac38f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAN_IDENTIFIER&#160;&#160;&#160;0x854;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CAN - Identifier (vorgegeben) </p>
+
+</div>
+</div>
+<a class="anchor" id="af5ba16a504690086a7a28a01172771be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAN_PERIPHERAL&#160;&#160;&#160;<a class="el" href="group___l_p_c17xx___system.html#ga2f006d6888921f8336dce504eb56f4aa">LPC_CAN1</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CAN - Schnittstelle (CAN1 oder CAN2) </p>
+
+</div>
+</div>
+<a class="anchor" id="aeca7e6ad3b3559dede1ff7e71825237f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2CDEV_M&#160;&#160;&#160;<a class="el" href="group___l_p_c17xx___system.html#gad6d6333e47875813be171cffef258837">LPC_I2C1</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Kanal 1 fuer I2C </p>
+
+</div>
+</div>
+<a class="anchor" id="aaf6652a0511f15cf4225d30387874344"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2CDEV_S_ADDR&#160;&#160;&#160;0x4F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>I2C-Adresse des DS1621 </p>
+
+</div>
+</div>
+<a class="anchor" id="abc211ccf660abfdbc1b27506dabbe224"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ_TEMPERATURE&#160;&#160;&#160;0xAA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temeratur lesen </p>
+
+</div>
+</div>
+<a class="anchor" id="a353d695caf812c38a42b06916fee0751"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_UP&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Continuous Conversion Mod einstellen </p>
+
+</div>
+</div>
+<a class="anchor" id="a203d0b4b0357f9d9296b77acacf85c9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define START_CONVERT_T&#160;&#160;&#160;0xEE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temeraturmessung starten </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="ac7781a37ca14c5bf42c4fe9de1f4daa8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void can_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>CAN-Initialisierung<b>: </b></b></p>
+<p>In dieser Funktion wird der CAN-Bus fuer die Uebertragung initialisiert.</p>
+<p>Es erfolgt:</p>
+<p>Baudrate: 125000 Hz</p>
+<p>Extended ID format (da ID: 0x854)</p>
+<p>Laenge des Datenfelds: 8</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_cgraph.png" border="0" usemap="#main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_cgraph" alt=""/></div>
+<map name="main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_cgraph" id="main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_cgraph">
+<area shape="rect" id="node2" href="group___p_i_n_s_e_l___public___functions.html#ga771fcbed8f7ee806292e06e283611dc9" title="Configure Pin corresponding to specified parameters passed in the PinCfg. " alt="" coords="120,5,251,32"/><area shape="rect" id="node3" href="group___c_a_n___public___functions.html#ga2605eb2d985f919e2b591f6472a69c0a" title="CAN_Init" alt="" coords="149,56,222,83"/><area shape="rect" id="node4" href="group___c_a_n___public___functions.html#gab58915eb635f7035bc2e6520c03789d3" title="CAN_ModeConfig" alt="" coords="123,107,247,133"/><area shape="rect" id="node5" href="group___c_a_n___public___functions.html#ga0d0e0f7d8ea71a138fb100f2efdcaf1e" title="CAN_IRQCmd" alt="" coords="133,157,238,184"/><area shape="rect" id="node6" href="group___c_m_s_i_s___core___n_v_i_c_functions.html#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="125,208,246,235"/><area shape="rect" id="node7" href="group___c_a_n___public___functions.html#gaaeb694de5c1f601e86f583a3fb028b73" title="CAN_SetAFMode" alt="" coords="123,259,248,285"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_icgraph.png" border="0" usemap="#main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_icgraph" alt=""/></div>
+<map name="main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_icgraph" id="main_8c_ac7781a37ca14c5bf42c4fe9de1f4daa8_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="120,5,171,32"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="219,5,373,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aabd1bbaa238adee80a0145ca7c6ce4c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS1621_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>DS1621 einschalten<b>: </b></b></p>
+<p>Funktion zum Einschalten/Konfigurieren des DS1621. Am Ende der Initialisierung werden 3 Dump-Messungen gemacht und die Messwerte verworfen. Das soll vorbeugen, dass gelich zu beginn auf dem Display falsche Werte angezeigt werden.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_cgraph.png" border="0" usemap="#main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_cgraph" alt=""/></div>
+<map name="main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_cgraph" id="main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_cgraph">
+<area shape="rect" id="node2" href="group___i2_c___public___functions.html#ga102947f62951ca9031674c3df8117352" title="I2C_MasterTransferData" alt="" coords="145,5,307,32"/><area shape="rect" id="node3" href="main_8c.html#a3dccc2054070aae79797f9363482420e" title="Warte&#45;Funktion mit Timer0: " alt="" coords="167,56,285,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_icgraph.png" border="0" usemap="#main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_icgraph" alt=""/></div>
+<map name="main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_icgraph" id="main_8c_aabd1bbaa238adee80a0145ca7c6ce4c6_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="145,5,196,32"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="244,5,399,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e4166cbb6ecdbaf5b5d11e29716ef73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init_I2C </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>I2C-Initialisierung<b>: </b></b></p>
+<p>In dieser Funktion erfolgt die Initialisierung des I2C-Buses fuer die Kommunikation mit dem Temperatursensor DS 1621.</p>
+<p>Es erfolgt: Clockrate: 100000 Hz</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_cgraph.png" border="0" usemap="#main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_cgraph" alt=""/></div>
+<map name="main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_cgraph" id="main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_cgraph">
+<area shape="rect" id="node2" href="group___p_i_n_s_e_l___public___functions.html#ga771fcbed8f7ee806292e06e283611dc9" title="Configure Pin corresponding to specified parameters passed in the PinCfg. " alt="" coords="119,5,249,32"/><area shape="rect" id="node3" href="group___i2_c___public___functions.html#ga4f0c228696f1a8b60437241ba9af7455" title="I2C_Init" alt="" coords="151,56,217,83"/><area shape="rect" id="node4" href="group___i2_c___public___functions.html#gae592e1754a5500b03a1bb92d30e04246" title="I2C_Cmd" alt="" coords="147,107,221,133"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_icgraph.png" border="0" usemap="#main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_icgraph" alt=""/></div>
+<map name="main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_icgraph" id="main_8c_a7e4166cbb6ecdbaf5b5d11e29716ef73_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="119,5,169,32"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="217,5,372,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7e748225f06b448b9637a13374e252f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init_LCD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>LCD-Initialisierung<b>: </b></b></p>
+<p>Initialisierung des LCD-Displays</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ae7e748225f06b448b9637a13374e252f_cgraph.png" border="0" usemap="#main_8c_ae7e748225f06b448b9637a13374e252f_cgraph" alt=""/></div>
+<map name="main_8c_ae7e748225f06b448b9637a13374e252f_cgraph" id="main_8c_ae7e748225f06b448b9637a13374e252f_cgraph">
+<area shape="rect" id="node2" href="lc798x_8c.html#a33bc1020b824d17ab27d3fe752420d76" title="lcd_init_interface" alt="" coords="125,5,243,32"/><area shape="rect" id="node3" href="lc798x_8c.html#ab3d0dfc4d013131dcd9abc5a83d89202" title="lcd_set_system" alt="" coords="308,107,423,133"/><area shape="rect" id="node7" href="lc798x_8c.html#a0978fc4c2fabee79c3664fc950d0cddd" title="lcd_set_cursor_mode" alt="" coords="292,157,439,184"/><area shape="rect" id="node8" href="lc798x_8c.html#ae4dc23fdf26f3b8b0db253f431fe950d" title="lcd_clear_screen" alt="" coords="124,233,244,260"/><area shape="rect" id="node11" href="lc798x_8c.html#aee7003d4222c1b4689d85a8f787cb371" title="lcd_control" alt="" coords="141,56,227,83"/><area shape="rect" id="node4" href="lc798x_8c.html#a08d0b7df8efda0c3b5af2955cccae65f" title="lc798x_register" alt="" coords="487,183,597,209"/><area shape="rect" id="node5" href="lc798x_8c.html#aadaccfff3a85ee0924556a54fa9d3014" title="lcd_write" alt="" coords="645,259,719,285"/><area shape="rect" id="node6" href="lc798x_8c.html#a6df91edebc1cc2015e9d66bf34b20d92" title="lc798x_wait_for_ready" alt="" coords="767,259,917,285"/><area shape="rect" id="node9" href="lc798x_8c.html#a05a4580ffdbd23deca7104bff0b9d7e8" title="lcd_set_layout" alt="" coords="312,208,419,235"/><area shape="rect" id="node10" href="lc798x_8c.html#a43fd8a89dbc4006d2d0121106bac3d47" title="lcd_set_cursor" alt="" coords="312,259,419,285"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ae7e748225f06b448b9637a13374e252f_icgraph.png" border="0" usemap="#main_8c_ae7e748225f06b448b9637a13374e252f_icgraph" alt=""/></div>
+<map name="main_8c_ae7e748225f06b448b9637a13374e252f_icgraph" id="main_8c_ae7e748225f06b448b9637a13374e252f_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="124,5,175,32"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="223,5,377,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abee0b2208e1314912cb1a9433720d704"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init_System </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>System-Initialisierung<b>: </b></b></p>
+<p>Initialisierung des Boards (Bis jetzt nur LED)</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_abee0b2208e1314912cb1a9433720d704_icgraph.png" border="0" usemap="#main_8c_abee0b2208e1314912cb1a9433720d704_icgraph" alt=""/></div>
+<map name="main_8c_abee0b2208e1314912cb1a9433720d704_icgraph" id="main_8c_abee0b2208e1314912cb1a9433720d704_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="144,5,195,32"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="243,5,397,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d2717ed70585c74e4cfcf7e9586b305"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Initialausgabe </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>Initialausgabe des LCDs<b> </b></b></p>
+<p>Funktion zum Testen des LCD-Display, es wird ein ein Initialtext ausgegeben</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a9d2717ed70585c74e4cfcf7e9586b305_cgraph.png" border="0" usemap="#main_8c_a9d2717ed70585c74e4cfcf7e9586b305_cgraph" alt=""/></div>
+<map name="main_8c_a9d2717ed70585c74e4cfcf7e9586b305_cgraph" id="main_8c_a9d2717ed70585c74e4cfcf7e9586b305_cgraph">
+<area shape="rect" id="node2" href="lc798x_8c.html#ae4dc23fdf26f3b8b0db253f431fe950d" title="lcd_clear_screen" alt="" coords="1087,324,1207,350"/><area shape="rect" id="node8" href="printf_8c.html#ad6c265f6d41266cbb62035915f9c0030" title="Outputs a formatted string on the DBGU stream, using a variable number of arguments. " alt="" coords="221,261,271,288"/><area shape="rect" id="node23" href="main_8c.html#a3dccc2054070aae79797f9363482420e" title="Warte&#45;Funktion mit Timer0: " alt="" coords="187,362,305,389"/><area shape="rect" id="node3" href="lc798x_8c.html#a05a4580ffdbd23deca7104bff0b9d7e8" title="lcd_set_layout" alt="" coords="1255,324,1361,350"/><area shape="rect" id="node5" href="lc798x_8c.html#aadaccfff3a85ee0924556a54fa9d3014" title="lcd_write" alt="" coords="1568,248,1641,274"/><area shape="rect" id="node7" href="lc798x_8c.html#a43fd8a89dbc4006d2d0121106bac3d47" title="lcd_set_cursor" alt="" coords="1255,273,1361,300"/><area shape="rect" id="node4" href="lc798x_8c.html#a08d0b7df8efda0c3b5af2955cccae65f" title="lc798x_register" alt="" coords="1409,273,1520,300"/><area shape="rect" id="node6" href="lc798x_8c.html#a6df91edebc1cc2015e9d66bf34b20d92" title="lc798x_wait_for_ready" alt="" coords="1689,248,1840,274"/><area shape="rect" id="node9" href="printf_8c.html#adc27df6594a246219000f9d2a584a3be" title="Outputs a formatted string on the DBGU stream. Format arguments are given in a va_list instance..." alt="" coords="353,236,408,262"/><area shape="rect" id="node10" href="printf_8c.html#a4c938d1cedba90cbc8107400ebea6100" title="Outputs a formatted string on the given stream. Format arguments are given in a va_list instance..." alt="" coords="456,236,515,262"/><area shape="rect" id="node11" href="printf_8c.html#ac2bd6c4c9ad1b563bdcd20f18a36811a" title="Stores the result of a formatted string into another string. Format arguments are given in a va_list ..." alt="" coords="563,134,625,161"/><area shape="rect" id="node18" href="printf_8c.html#ad870e26ae50d712bb504aa4b067802f4" title="Implementation of fputs using the DBGU as the standard output. Required for printf(). " alt="" coords="569,236,619,262"/><area shape="rect" id="node12" href="printf_8c.html#a8f2d28f08e5d66db9a14ed70cb1f4220" title="Stores the result of a formatted string into another string. Format arguments are given in a va_list ..." alt="" coords="673,109,743,136"/><area shape="rect" id="node13" href="printf_8c.html#ae7337166e7d8bcc7d589e63777ae2541" title="Writes a signed int inside the given string, using the provided fill &amp; width parameters. " alt="" coords="798,84,894,110"/><area shape="rect" id="node14" href="printf_8c.html#a9d6957a52d69935cd92755844e9252be" title="Writes a character inside the given string. Returns 1. " alt="" coords="959,109,1029,136"/><area shape="rect" id="node15" href="printf_8c.html#afeda5b1cd1c8e201b2fc997b35d03281" title="Writes an unsigned int inside the given string, using the provided fill &amp; width parameters. " alt="" coords="791,134,901,161"/><area shape="rect" id="node16" href="printf_8c.html#a3b3bdb18a334228eb2b08b1a70c1a62a" title="Writes an hexadecimal value into a string, using the given fill, width &amp; capital parameters. " alt="" coords="810,185,882,212"/><area shape="rect" id="node17" href="printf_8c.html#a9692c423423d4787d69f090a359c5644" title="Writes a string inside the given string. " alt="" coords="808,33,884,60"/><area shape="rect" id="node19" href="printf_8c.html#a25c4b74226a8a3a0d6eef3a072be087b" title="Implementation of fputc using the DBGU as the standard output. Required for printf(). " alt="" coords="683,236,733,262"/><area shape="rect" id="node20" href="printf_8c.html#aac7233dce0ef357b1ea507667a7b6e07" title="Transmit a char, if you want to use printf(), you need implement this function. " alt="" coords="808,236,884,262"/><area shape="rect" id="node21" href="lc798x_8c.html#a5330b79372b260630a9049c60b1fefa3" title="lcd_putchar" alt="" coords="949,229,1039,256"/><area shape="rect" id="node22" href="lc798x_8c.html#a7327a2088a6342e03a124c2335c73520" title="lcd_newline" alt="" coords="1102,273,1191,300"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a9d2717ed70585c74e4cfcf7e9586b305_icgraph.png" border="0" usemap="#main_8c_a9d2717ed70585c74e4cfcf7e9586b305_icgraph" alt=""/></div>
+<map name="main_8c_a9d2717ed70585c74e4cfcf7e9586b305_icgraph" id="main_8c_a9d2717ed70585c74e4cfcf7e9586b305_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="187,5,237,32"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="285,5,440,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>Main-Programm<b>: </b></b></p>
+<p>Zu Beginn werden alle Initalisierungen durchgefuehrt.</p>
+<p>Hier werden zunaechst alle noetigen Initialisierungen vorgenommen:</p>
+<p><a class="el" href="main_8c.html#abee0b2208e1314912cb1a9433720d704" title="System-Initialisierung: ">Init_System()</a> - LED auf Board wird auf Ausgang gestellt</p>
+<p><a class="el" href="main_8c.html#ae7e748225f06b448b9637a13374e252f" title="LCD-Initialisierung: ">Init_LCD()</a> - LCD-Display wird initialisiert</p>
+<p><a class="el" href="main_8c.html#a7e4166cbb6ecdbaf5b5d11e29716ef73" title="I2C-Initialisierung: ">Init_I2C()</a> - I2C-Bus wird initialisiert</p>
+<p><a class="el" href="main_8c.html#ac7781a37ca14c5bf42c4fe9de1f4daa8" title="CAN-Initialisierung: ">can_init()</a> - CAN-Bus wird initialisiert</p>
+<p>Mit der Funktion <a class="el" href="main_8c.html#aabd1bbaa238adee80a0145ca7c6ce4c6" title="DS1621 einschalten: ">DS1621_Init()</a> wird der Temperatursensor DS1621 ueber den I2C-Bus konfiguriert und fuer die Temperaturmessung vorbereitet.</p>
+<p>Abschliessend erfolgt die gesamte Kommunikation und Messung in einer Endlosschleife (while-Schleife). Die Messung wird alle 500 ms wiederholt und mit dem Blinken der LED visualisiert. </p>
+
+<p><div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" alt=""/></div>
+<map name="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
+<area shape="rect" id="node2" href="main_8c.html#abee0b2208e1314912cb1a9433720d704" title="System&#45;Initialisierung: " alt="" coords="125,5,216,32"/><area shape="rect" id="node3" href="main_8c.html#ae7e748225f06b448b9637a13374e252f" title="LCD&#45;Initialisierung: " alt="" coords="1100,461,1171,488"/><area shape="rect" id="node12" href="lc798x_8c.html#a43fd8a89dbc4006d2d0121106bac3d47" title="lcd_set_cursor" alt="" coords="1416,208,1523,235"/><area shape="rect" id="node14" href="main_8c.html#a9d2717ed70585c74e4cfcf7e9586b305" title="Initialausgabe des LCDs " alt="" coords="104,411,237,437"/><area shape="rect" id="node15" href="printf_8c.html#ad6c265f6d41266cbb62035915f9c0030" title="Outputs a formatted string on the DBGU stream, using a variable number of arguments. " alt="" coords="341,360,391,387"/><area shape="rect" id="node30" href="main_8c.html#a3dccc2054070aae79797f9363482420e" title="Warte&#45;Funktion mit Timer0: " alt="" coords="307,512,425,539"/><area shape="rect" id="node31" href="main_8c.html#a7e4166cbb6ecdbaf5b5d11e29716ef73" title="I2C&#45;Initialisierung: " alt="" coords="138,867,203,893"/><area shape="rect" id="node35" href="main_8c.html#ac7781a37ca14c5bf42c4fe9de1f4daa8" title="CAN&#45;Initialisierung: " alt="" coords="137,715,204,741"/><area shape="rect" id="node41" href="main_8c.html#aabd1bbaa238adee80a0145ca7c6ce4c6" title="DS1621 einschalten: " alt="" coords="125,563,217,589"/><area shape="rect" id="node42" href="group___i2_c___public___functions.html#ga102947f62951ca9031674c3df8117352" title="I2C_MasterTransferData" alt="" coords="285,563,447,589"/><area shape="rect" id="node43" href="group___c_a_n___public___functions.html#gaea0b9965302bb6d9c7c69bd1d469d3c7" title="CAN_SendMsg" alt="" coords="115,917,226,944"/><area shape="rect" id="node4" href="lc798x_8c.html#a33bc1020b824d17ab27d3fe752420d76" title="lcd_init_interface" alt="" coords="1229,512,1347,539"/><area shape="rect" id="node5" href="lc798x_8c.html#ab3d0dfc4d013131dcd9abc5a83d89202" title="lcd_set_system" alt="" coords="1412,537,1527,564"/><area shape="rect" id="node9" href="lc798x_8c.html#a0978fc4c2fabee79c3664fc950d0cddd" title="lcd_set_cursor_mode" alt="" coords="1396,411,1543,437"/><area shape="rect" id="node10" href="lc798x_8c.html#ae4dc23fdf26f3b8b0db253f431fe950d" title="lcd_clear_screen" alt="" coords="1228,360,1348,387"/><area shape="rect" id="node13" href="lc798x_8c.html#aee7003d4222c1b4689d85a8f787cb371" title="lcd_control" alt="" coords="1245,461,1331,488"/><area shape="rect" id="node6" href="lc798x_8c.html#a08d0b7df8efda0c3b5af2955cccae65f" title="lc798x_register" alt="" coords="1591,411,1701,437"/><area shape="rect" id="node7" href="lc798x_8c.html#aadaccfff3a85ee0924556a54fa9d3014" title="lcd_write" alt="" coords="1749,309,1823,336"/><area shape="rect" id="node8" href="lc798x_8c.html#a6df91edebc1cc2015e9d66bf34b20d92" title="lc798x_wait_for_ready" alt="" coords="1871,309,2021,336"/><area shape="rect" id="node11" href="lc798x_8c.html#a05a4580ffdbd23deca7104bff0b9d7e8" title="lcd_set_layout" alt="" coords="1416,309,1523,336"/><area shape="rect" id="node16" href="printf_8c.html#adc27df6594a246219000f9d2a584a3be" title="Outputs a formatted string on the DBGU stream. Format arguments are given in a va_list instance..." alt="" coords="495,360,549,387"/><area shape="rect" id="node17" href="printf_8c.html#a4c938d1cedba90cbc8107400ebea6100" title="Outputs a formatted string on the given stream. Format arguments are given in a va_list instance..." alt="" coords="597,360,656,387"/><area shape="rect" id="node18" href="printf_8c.html#ac2bd6c4c9ad1b563bdcd20f18a36811a" title="Stores the result of a formatted string into another string. Format arguments are given in a va_list ..." alt="" coords="704,259,767,285"/><area shape="rect" id="node25" href="printf_8c.html#ad870e26ae50d712bb504aa4b067802f4" title="Implementation of fputs using the DBGU as the standard output. Required for printf(). " alt="" coords="710,360,761,387"/><area shape="rect" id="node19" href="printf_8c.html#a8f2d28f08e5d66db9a14ed70cb1f4220" title="Stores the result of a formatted string into another string. Format arguments are given in a va_list ..." alt="" coords="815,233,884,260"/><area shape="rect" id="node20" href="printf_8c.html#ae7337166e7d8bcc7d589e63777ae2541" title="Writes a signed int inside the given string, using the provided fill &amp; width parameters. " alt="" coords="939,259,1035,285"/><area shape="rect" id="node21" href="printf_8c.html#a9d6957a52d69935cd92755844e9252be" title="Writes a character inside the given string. Returns 1. " alt="" coords="1101,208,1170,235"/><area shape="rect" id="node22" href="printf_8c.html#afeda5b1cd1c8e201b2fc997b35d03281" title="Writes an unsigned int inside the given string, using the provided fill &amp; width parameters. " alt="" coords="932,309,1043,336"/><area shape="rect" id="node23" href="printf_8c.html#a3b3bdb18a334228eb2b08b1a70c1a62a" title="Writes an hexadecimal value into a string, using the given fill, width &amp; capital parameters. " alt="" coords="951,157,1023,184"/><area shape="rect" id="node24" href="printf_8c.html#a9692c423423d4787d69f090a359c5644" title="Writes a string inside the given string. " alt="" coords="949,107,1025,133"/><area shape="rect" id="node26" href="printf_8c.html#a25c4b74226a8a3a0d6eef3a072be087b" title="Implementation of fputc using the DBGU as the standard output. Required for printf(). " alt="" coords="824,360,875,387"/><area shape="rect" id="node27" href="printf_8c.html#aac7233dce0ef357b1ea507667a7b6e07" title="Transmit a char, if you want to use printf(), you need implement this function. " alt="" coords="949,360,1025,387"/><area shape="rect" id="node28" href="lc798x_8c.html#a5330b79372b260630a9049c60b1fefa3" title="lcd_putchar" alt="" coords="1091,259,1180,285"/><area shape="rect" id="node29" href="lc798x_8c.html#a7327a2088a6342e03a124c2335c73520" title="lcd_newline" alt="" coords="1243,259,1333,285"/><area shape="rect" id="node32" href="group___p_i_n_s_e_l___public___functions.html#ga771fcbed8f7ee806292e06e283611dc9" title="Configure Pin corresponding to specified parameters passed in the PinCfg. " alt="" coords="301,867,431,893"/><area shape="rect" id="node33" href="group___i2_c___public___functions.html#ga4f0c228696f1a8b60437241ba9af7455" title="I2C_Init" alt="" coords="333,917,399,944"/><area shape="rect" id="node34" href="group___i2_c___public___functions.html#gae592e1754a5500b03a1bb92d30e04246" title="I2C_Cmd" alt="" coords="329,968,403,995"/><area shape="rect" id="node36" href="group___c_a_n___public___functions.html#ga2605eb2d985f919e2b591f6472a69c0a" title="CAN_Init" alt="" coords="329,715,403,741"/><area shape="rect" id="node37" href="group___c_a_n___public___functions.html#gab58915eb635f7035bc2e6520c03789d3" title="CAN_ModeConfig" alt="" coords="304,765,428,792"/><area shape="rect" id="node38" href="group___c_a_n___public___functions.html#ga0d0e0f7d8ea71a138fb100f2efdcaf1e" title="CAN_IRQCmd" alt="" coords="313,816,419,843"/><area shape="rect" id="node39" href="group___c_m_s_i_s___core___n_v_i_c_functions.html#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="305,613,427,640"/><area shape="rect" id="node40" href="group___c_a_n___public___functions.html#gaaeb694de5c1f601e86f583a3fb028b73" title="CAN_SetAFMode" alt="" coords="303,664,429,691"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_icgraph.png" border="0" usemap="#main_8c_a840291bc02cba5474a4cb46a9b9566fe_icgraph" alt=""/></div>
+<map name="main_8c_a840291bc02cba5474a4cb46a9b9566fe_icgraph" id="main_8c_a840291bc02cba5474a4cb46a9b9566fe_icgraph">
+<area shape="rect" id="node2" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="104,5,259,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3dccc2054070aae79797f9363482420e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer0_DelayMs </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>delayInMs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>Warte-Funktion mit Timer0<b>: </b></b></p>
+<p>Wartefunktion mit Timer0</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Wartezeit</td><td>in ms </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>none </dd></dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a3dccc2054070aae79797f9363482420e_icgraph.png" border="0" usemap="#main_8c_a3dccc2054070aae79797f9363482420e_icgraph" alt=""/></div>
+<map name="main_8c_a3dccc2054070aae79797f9363482420e_icgraph" id="main_8c_a3dccc2054070aae79797f9363482420e_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main&#45;Programm: " alt="" coords="353,24,404,51"/><area shape="rect" id="node4" href="main_8c.html#a9d2717ed70585c74e4cfcf7e9586b305" title="Initialausgabe des LCDs " alt="" coords="172,24,305,51"/><area shape="rect" id="node5" href="main_8c.html#aabd1bbaa238adee80a0145ca7c6ce4c6" title="DS1621 einschalten: " alt="" coords="193,75,285,101"/><area shape="rect" id="node3" href="startup___l_p_c17xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="452,24,607,51"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a class="anchor" id="adb82839a7dd0b5a5d344c824e2cc0c6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Master_Buf[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>2 Byte Feld zur Konfiguration des DS 1621 </p>
+
+</div>
+</div>
+<a class="anchor" id="a22083417a01d43ffea7085cbbc712a47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Temperatur[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>2 Byte Feld zum Ablegen der Temperaturwerte (MSB,LSB) </p>
+
+</div>
+</div>
+<a class="anchor" id="adce78e64e33819824c357a0e6c6cb6c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_i2_c___m___s_e_t_u_p___type.html">I2C_M_SETUP_Type</a> transferMCfg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>I2C Variable Definition </p>
+
+</div>
+</div>
+<a class="anchor" id="a6c1861562de158a27a18235880267a48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_c_a_n___m_s_g___type.html">CAN_MSG_Type</a> TXMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CAN Variable Definition </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_958ed0026fbcc81338a971a91e34e257.html">Temperatursensor_DS1621</a></li><li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
+    <li class="footer">Erzeugt am Don Jun 11 2015 18:43:35 für Aufgabe XVI: Temperatursensor DS1621 von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
