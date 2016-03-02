@@ -4,7 +4,7 @@
 
 This is the main project directory.
 
-You can open the project [ DS1621_AuerLinggMaier.coproj] (DS1621_AuerLinggMaier.coproj) with CoCCox's CoIDE. Please let me know if you have any problems with that.
+You can open the project [ TemperatureSensor_DS1621.coproj] (TemperatureSensor_DS1621.coproj) with CoCCox's CoIDE. Please let me know if you have any problems with that.
 
 For that project I used the ARM Cortex-M3 Microcontroller (NXP LPC1769) and of course the DS1621 temperature sensor.
 
