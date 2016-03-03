@@ -21,5 +21,5 @@ Please note: The comments in the code are in German, just message me if you have
 
 # License
 
-See the [LICENSE](LICENSE.MD) file for license rights and limitations (MIT).
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
 
